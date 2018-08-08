@@ -5,7 +5,7 @@ export default {
     {
       path: 'widgets',
       getComponent(nextState, cb){
-        System.import('./components/Widgets').then((m)=> {
+        import('./components/Widgets').then((m)=> {
           cb(null, m.default)
         })
       }

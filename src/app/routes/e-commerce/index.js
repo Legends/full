@@ -9,7 +9,7 @@ export default {
     {
       path: 'products-detail',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/products-detail.html').then((html)=> {
+        import('html-loader?-attrs!./content/products-detail.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'products-view',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/products-view.html').then((html)=> {
+        import('html-loader?-attrs!./content/products-view.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -30,7 +30,7 @@ export default {
     {
       path: 'orders',
       getComponent(nextState, cb){
-        System.import('./containers/Orders').then((m)=> {
+        import('./containers/Orders').then((m)=> {
           cb(null, m.default)
         })
       }

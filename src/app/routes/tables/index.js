@@ -6,7 +6,7 @@ export default {
     {
       path: 'datatables',
       getComponent(nextState, cb){
-        System.import('./containers/Datatables').then((m)=> {
+        import('./containers/Datatables').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -15,7 +15,7 @@ export default {
     {
       path: 'normal-tables',
       getComponent(nextState, cb){
-        System.import('./containers/NormalTables').then((m)=> {
+        import('./containers/NormalTables').then((m)=> {
           cb(null, m.default)
         })
       }

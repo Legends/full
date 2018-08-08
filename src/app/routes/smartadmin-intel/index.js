@@ -9,7 +9,7 @@ export default {
     {
       path: 'app-layouts',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/app-layouts.html').then((html)=> {
+        import('html-loader?-attrs!./content/app-layouts.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'skins',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/skins.html').then((html)=> {
+        import('html-loader?-attrs!./content/skins.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )

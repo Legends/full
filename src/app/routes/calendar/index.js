@@ -8,7 +8,7 @@ export default {
   childRoutes: [{
     path: 'calendar',
     getComponent: (nextState, cb)=>{
-      System.import('./containers/CalendarPage').then( m => {
+      import('./containers/CalendarPage').then( m => {
         cb(null, m.default)
       })
     }

@@ -6,7 +6,7 @@ export default {
     {
       path: 'lock',
       getComponent(nextState, cb){
-        System.import('./containers/LockedScreen').then((m)=> {
+        import('./containers/LockedScreen').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -14,7 +14,7 @@ export default {
     {
       path: 'login',
       getComponent(nextState, cb){
-        System.import('./containers/Login').then((m)=> {
+        import('./containers/Login').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -22,7 +22,7 @@ export default {
     {
       path: 'register',
       getComponent(nextState, cb){
-        System.import('./containers/Register').then((m)=> {
+        import('./containers/Register').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -30,7 +30,7 @@ export default {
     {
       path: 'forgot',
       getComponent(nextState, cb){
-        System.import('./containers/Forgot').then((m)=> {
+        import('./containers/Forgot').then((m)=> {
           cb(null, m.default)
         })
       }

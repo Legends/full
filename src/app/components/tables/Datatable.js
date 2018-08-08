@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 export default class Datatable extends React.Component {
   componentDidMount() {
-    System.import('script-loader!smartadmin-plugins/datatables-bundle/datatables.min.js').then(()=> {
+    import('script-loader!smartadmin-plugins/datatables-bundle/datatables.min.js').then(()=> {
       this.datatable(this.props.data)
     });
   }

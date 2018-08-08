@@ -4,7 +4,7 @@ export default {
     {
       path: 'maps',
       getComponent(nextState, cb){
-        System.import('./components/Maps').then((m)=> {
+        import('./components/Maps').then((m)=> {
           cb(null, m.default)
         })
       },
@@ -12,7 +12,7 @@ export default {
         {
           path: ':style',
           getComponent(nextState, cb){
-            System.import('./components/MapView').then((m)=> {
+            import('./components/MapView').then((m)=> {
               cb(null, m.default)
             })
           },

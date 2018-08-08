@@ -18,12 +18,7 @@ module.exports = (env) => {
   return {
     context: path.resolve(__dirname),
     entry: {
-      main: './src/app/main.js',
-      vendor: [
-        'react', 'react-dom', 'jquery', 'moment',
-        // 'jquery-ui', 'bootstrap',
-        'react-bootstrap', 'lodash'
-      ]
+      main: './src/app/main.js',    
     },
     output: {
       path: path.resolve(__dirname, './dist'),
@@ -95,7 +90,7 @@ module.exports = (env) => {
       // hot: true,
       compress:true,
       publicPath: '/',
-      stats: "minimal"
+      // stats: "minimal"
 
     },
     stats: "minimal",
@@ -118,12 +113,12 @@ module.exports = (env) => {
         chunksSortMode: 'dependency'
       }),
 
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        filename: 'js/[hash].vendor.js',
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: 'vendor',
+      //   filename: 'js/[hash].vendor.js',
 
-        minChunks: Infinity,
-      }),
+      //   minChunks: Infinity,
+      // }),
 
       new webpack.DefinePlugin({
         process: {
@@ -131,21 +126,7 @@ module.exports = (env) => {
             NODE_ENV: isDev ? '"development"' : '"production"'
           }
         }
-      }),
-
-
-    ].concat(
-      !isDev
-        ? // production only plugins
-        [
-          new webpack.optimize.UglifyJsPlugin({
-            compress: {
-              warnings: false
-            }
-          }),
-        ]
-        :// dev only plugins
-        []
-    )
+      })
+    ]
   }
 };

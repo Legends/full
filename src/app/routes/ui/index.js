@@ -9,7 +9,7 @@ export default {
     {
       path: 'buttons',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/buttons.html').then((html)=> {
+        import('html-loader?-attrs!./content/buttons.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'grid',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/grid.html').then((html)=> {
+        import('html-loader?-attrs!./content/grid.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -29,7 +29,7 @@ export default {
     {
       path: 'typography',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/typography.html').then((html)=> {
+        import('html-loader?-attrs!./content/typography.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -39,7 +39,7 @@ export default {
     {
       path: 'tree-views',
       getComponent(nextState, cb){
-        System.import('./containers/TreeViews').then((m)=> {
+        import('./containers/TreeViews').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -47,7 +47,7 @@ export default {
     {
       path: 'general',
       getComponent(nextState, cb){
-        System.import('./containers/UiGeneral').then((m)=> {
+        import('./containers/UiGeneral').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -55,7 +55,7 @@ export default {
     {
       path: 'nestable-lists',
       getComponent(nextState, cb){
-        System.import('./containers/NestableLists').then((m)=> {
+        import('./containers/NestableLists').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -63,7 +63,7 @@ export default {
     {
       path: 'jquery-ui',
       getComponent(nextState, cb){
-        System.import('./containers/JQueryUi').then((m)=> {
+        import('./containers/JQueryUi').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -71,7 +71,7 @@ export default {
     {
       path: 'font-awesome',
       getComponent(nextState, cb){
-        System.import('./containers/icons/FontAwesomeIcons').then((m)=> {
+        import('./containers/icons/FontAwesomeIcons').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -79,7 +79,7 @@ export default {
     {
       path: 'flags',
       getComponent(nextState, cb){
-        System.import('./containers/icons/FlagIcons').then((m)=> {
+        import('./containers/icons/FlagIcons').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -87,7 +87,7 @@ export default {
     {
       path: 'glyphicons',
       getComponent(nextState, cb){
-        System.import('./containers/icons/Glyphicons').then((m)=> {
+        import('./containers/icons/Glyphicons').then((m)=> {
           cb(null, m.default)
         })
       }

@@ -8,7 +8,7 @@ export default {
     {
       path: 'analytics',
       getComponent(nextState, cb){
-        System.import('./containers/Dashboard').then((m)=> {
+        import('./containers/Dashboard').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -17,7 +17,7 @@ export default {
     {
       path: 'social-wall',
       getComponent(nextState, cb){
-        System.import('./containers/SocialWall').then((m)=> {
+        import('./containers/SocialWall').then((m)=> {
           cb(null, m.default)
         })
       }

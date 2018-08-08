@@ -9,7 +9,7 @@ export default {
     {
       path: 'form-validation',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/form-validation.html').then((html)=> {
+        import('html-loader?-attrs!./content/form-validation.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'bootstrap-form-elements',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/bootstrap-form-elements.html').then((html)=> {
+        import('html-loader?-attrs!./content/bootstrap-form-elements.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -30,7 +30,7 @@ export default {
     {
       path: 'wizards',
       getComponent(nextState, cb){
-        System.import('./containers/Wizards').then((m)=> {
+        import('./containers/Wizards').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -39,7 +39,7 @@ export default {
     {
       path: 'bootstrap-editors',
       getComponent(nextState, cb){
-        System.import('./containers/BootstrapEditors').then((m)=> {
+        import('./containers/BootstrapEditors').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -48,7 +48,7 @@ export default {
     {
       path: 'bootstrap-validation',
       getComponent(nextState, cb){
-        System.import('./containers/BootstrapValidation').then((m)=> {
+        import('./containers/BootstrapValidation').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -57,7 +57,7 @@ export default {
     {
       path: 'dropzone',
       getComponent(nextState, cb){
-        System.import('./containers/DropzoneDemo').then((m)=> {
+        import('./containers/DropzoneDemo').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -66,7 +66,7 @@ export default {
     {
       path: 'elements',
       getComponent(nextState, cb){
-        System.import('./containers/FormElements').then((m)=> {
+        import('./containers/FormElements').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -75,7 +75,7 @@ export default {
     {
       path: 'layouts',
       getComponent(nextState, cb){
-        System.import('./containers/FormLayouts').then((m)=> {
+        import('./containers/FormLayouts').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -83,7 +83,7 @@ export default {
     {
       path: 'plugins',
       getComponent(nextState, cb){
-        System.import('./containers/FormPlugins').then((m)=> {
+        import('./containers/FormPlugins').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -91,7 +91,7 @@ export default {
     {
       path: 'image-editor',
       getComponent(nextState, cb){
-        System.import('./containers/ImageEditor').then((m)=> {
+        import('./containers/ImageEditor').then((m)=> {
           cb(null, m.default)
         })
       }

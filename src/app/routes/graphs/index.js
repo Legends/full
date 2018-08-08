@@ -9,7 +9,7 @@ export default {
     {
       path: 'flot',
       getComponent(nextState, cb){
-        System.import('./containers/FlotCharts').then((m)=> {
+        import('./containers/FlotCharts').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -18,7 +18,7 @@ export default {
     {
       path: 'chartjs',
       getComponent(nextState, cb){
-        System.import('./containers/ChartJs').then((m)=> {
+        import('./containers/ChartJs').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -27,7 +27,7 @@ export default {
     {
       path: 'morris',
       getComponent(nextState, cb){
-        System.import('./containers/MorrisCharts').then((m)=> {
+        import('./containers/MorrisCharts').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -36,7 +36,7 @@ export default {
     {
       path: 'sparklines',
       getComponent(nextState, cb){
-        System.import('./containers/SparklineCharts').then((m)=> {
+        import('./containers/SparklineCharts').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -45,7 +45,7 @@ export default {
     {
       path: 'easy-pie-charts',
       getComponent(nextState, cb){
-        System.import('./containers/EasyPieCharts').then((m)=> {
+        import('./containers/EasyPieCharts').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -54,7 +54,7 @@ export default {
     {
       path: 'dygraphs',
       getComponent(nextState, cb){
-        System.import('./containers/Dygraphs').then((m)=> {
+        import('./containers/Dygraphs').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -62,7 +62,7 @@ export default {
     {
       path: 'highchart-table',
       getComponent(nextState, cb){
-        System.import('./containers/HighchartTables').then((m)=> {
+        import('./containers/HighchartTables').then((m)=> {
           cb(null, m.default)
         })
       }

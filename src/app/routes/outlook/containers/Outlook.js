@@ -1,6 +1,6 @@
 import React from 'react'
 import {Dropdown, MenuItem, OverlayTrigger, Tooltip, ProgressBar} from 'react-bootstrap'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 
 import {bindActionCreators} from 'redux'

@@ -9,7 +9,7 @@ export default {
     {
       path: 'email-template',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/email-template.html').then((html)=> {
+        import('html-loader?-attrs!./content/email-template.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'invoice',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/invoice.html').then((html)=> {
+        import('html-loader?-attrs!./content/invoice.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -29,7 +29,7 @@ export default {
     {
       path: 'pricing-tables',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/pricing-tables.html').then((html)=> {
+        import('html-loader?-attrs!./content/pricing-tables.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -39,7 +39,7 @@ export default {
     {
       path: 'search',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/search.html').then((html)=> {
+        import('html-loader?-attrs!./content/search.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -50,7 +50,7 @@ export default {
     {
       path: 'blank',
       getComponent(nextState, cb){
-        System.import('./containers/BlankPage').then((m)=> {
+        import('./containers/BlankPage').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -58,7 +58,7 @@ export default {
     {
       path: '404',
       getComponent(nextState, cb){
-        System.import('./containers/Page404').then((m)=> {
+        import('./containers/Page404').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -66,7 +66,7 @@ export default {
     {
       path: '500',
       getComponent(nextState, cb){
-        System.import('./containers/Page500').then((m)=> {
+        import('./containers/Page500').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -74,7 +74,7 @@ export default {
     {
       path: 'ck-editor',
       getComponent(nextState, cb){
-        System.import('./containers/CKEditorDemo').then((m)=> {
+        import('./containers/CKEditorDemo').then((m)=> {
           cb(null, m.default)
         })
       }

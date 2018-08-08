@@ -12,7 +12,7 @@ export default {
       indexRoute: { onEnter: (nextState, replace) => replace('/outlook/folder/inbox') },
 
       getComponent(nextState, cb){
-        System.import('./containers/Outlook').then((m)=> {
+        import('./containers/Outlook').then((m)=> {
           cb(null, m.default)
         })
       },
@@ -21,7 +21,7 @@ export default {
         {
           path: 'folder/:folder',
           getComponent(nextState, cb){
-            System.import('./containers/OutlookFolder').then((m)=> {
+            import('./containers/OutlookFolder').then((m)=> {
               cb(null, m.default)
             })
           }
@@ -29,7 +29,7 @@ export default {
         {
           path: 'detail/:id',
           getComponent(nextState, cb){
-            System.import('./containers/OutlookDetail').then((m)=> {
+            import('./containers/OutlookDetail').then((m)=> {
               cb(null, m.default)
             })
           }
@@ -37,7 +37,7 @@ export default {
         {
           path: 'replay/:id',
           getComponent(nextState, cb){
-            System.import('./containers/OutlookReplay').then((m)=> {
+            import('./containers/OutlookReplay').then((m)=> {
               cb(null, m.default)
             })
           }
@@ -45,7 +45,7 @@ export default {
         {
           path: 'compose',
           getComponent(nextState, cb){
-            System.import('./containers/OutlookCompose').then((m)=> {
+            import('./containers/OutlookCompose').then((m)=> {
               cb(null, m.default)
             })
           }

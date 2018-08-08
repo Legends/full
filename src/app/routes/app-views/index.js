@@ -9,7 +9,7 @@ export default {
     {
       path: 'blog',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/blog.html').then((html)=> {
+        import('html-loader?-attrs!./content/blog.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -19,7 +19,7 @@ export default {
     {
       path: 'profile',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/profile.html').then((html)=> {
+        import('html-loader?-attrs!./content/profile.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -29,7 +29,7 @@ export default {
     {
       path: 'timeline',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/timeline.html').then((html)=> {
+        import('html-loader?-attrs!./content/timeline.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -39,7 +39,7 @@ export default {
     {
       path: 'forum-general',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/forum/general.html').then((html)=> {
+        import('html-loader?-attrs!./content/forum/general.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -49,7 +49,7 @@ export default {
     {
       path: 'forum-post',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/forum/post.html').then((html)=> {
+        import('html-loader?-attrs!./content/forum/post.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -59,7 +59,7 @@ export default {
     {
       path: 'forum-topic',
       getComponent(nextState, cb){
-        System.import('html-loader?-attrs!./content/forum/topic.html').then((html)=> {
+        import('html-loader?-attrs!./content/forum/topic.html').then((html)=> {
           cb(null,
             () => (<HtmlRender html={html}/>)
           )
@@ -70,7 +70,7 @@ export default {
     {
       path: 'gallery',
       getComponent(nextState, cb){
-        System.import('./containers/Gallery').then((m)=> {
+        import('./containers/Gallery').then((m)=> {
           cb(null, m.default)
         })
       }
@@ -79,7 +79,7 @@ export default {
     {
       path: 'projects',
       getComponent(nextState, cb){
-        System.import('./containers/Projects').then((m)=> {
+        import('./containers/Projects').then((m)=> {
           cb(null, m.default)
         })
       }

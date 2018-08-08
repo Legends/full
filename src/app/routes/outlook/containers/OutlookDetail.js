@@ -1,6 +1,6 @@
 import React from 'react'
 import {OverlayTrigger, Tooltip, Dropdown, MenuItem} from 'react-bootstrap'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 import _ from 'lodash'
 
 import {connect} from 'react-redux'
