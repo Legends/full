@@ -18,7 +18,7 @@
   "homepage": "https://bitbucket.org/smartadmin-dev/smartadmin-reactjs#readme",
   "dependencies": {
     "X-editable": "github:vitalets/x-editable",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "bootstrap-colorpicker": "2.5.1",
     "bootstrap-duallistbox": "github:istvan-ujjmeszaros/bootstrap-duallistbox",
     "bootstrap-markdown": "2.10.0",
